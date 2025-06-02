@@ -11,6 +11,10 @@
     height: 80px;
 }
 
+.logo{
+    width: 50%;
+}
+
 .nav-links {
     display: flex;
     width: 50%;

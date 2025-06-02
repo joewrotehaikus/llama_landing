@@ -9,7 +9,7 @@ const HamburgerMenu = () => {
     const toggleMenu = () => setOpen(!open);
   
     return (
-      <div>
+      <div className='ham_menu_main'>
         <button className="hamburger-toggle" onClick={toggleMenu}>
           ☰
         </button>

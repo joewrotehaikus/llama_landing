@@ -5,6 +5,10 @@
     }
 }
 
+.ham_menu_main{
+    width: 0%;
+}
+
 .hamburger-toggle {
     font-size: 24px;
     background: none;
