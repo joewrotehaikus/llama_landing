@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+}
+
+.footer-Upper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-Upper-left {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.footer-Upper-right {
+    width: 50%;
+    background-color: grey;
+    border-radius: 8px;
+    height: 100px;
+}
+
+.foot-list {
+    display: flex;
+    flex-direction: column;
+}

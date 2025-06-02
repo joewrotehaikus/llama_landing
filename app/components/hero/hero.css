@@ -1,0 +1,57 @@
+a {
+    text-decoration: none;
+}
+
+.heroblock {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px;
+    margin-top: 50px;
+}
+
+.mainsvg {
+    width: 50%;
+    min-width: 400px;
+    height: 100%;
+}
+
+.mainsvg img {
+    height: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    align-items: start;
+    height: 90%;
+    justify-content: space-between;
+}
+
+.info h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.info a {
+    background-color: #0f172a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.info a:hover {
+    padding: 10px 30px;
+}

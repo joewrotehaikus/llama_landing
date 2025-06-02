@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+}
+
+.logo img {
+    width: 100px;
+    height: 80px;
+}
+
+.nav-links {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-links a {
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    color: black;
+}
+
+.nav-links a:hover {
+    background-color: #0f172a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.cta-btn {
+    background-color: #0f172a;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.cta-btn:hover {
+    padding: 10px 30px !important;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
