@@ -1,5 +1,5 @@
 /* Hide the menu on wider screens */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .hamburger-toggle {
         display: none;
     }

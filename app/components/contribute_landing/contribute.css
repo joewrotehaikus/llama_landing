@@ -1,29 +1,25 @@
-a {
-    text-decoration: none;
-}
-
-.heroblock {
+.contribute {
     display: flex;
     width: 80%;
     margin: auto;
     align-items: center;
     justify-content: space-between;
     height: 300px;
-    margin-top: 50px;
+    margin: 60px auto;
 }
 
-.mainsvg {
+.contrisvg {
     width: 50%;
     min-width: 400px;
     height: 100%;
 }
 
-.mainsvg img {
+.contrisvg img {
     height: 100%;
     min-width: 450px;
 }
 
-.info {
+.contribute_info {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -33,18 +29,24 @@ a {
     justify-content: space-between;
 }
 
-.info h1 {
+.contribute_btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contribute_info h1 {
     font-size: 35px;
     font-weight: 700;
 }
 
-.info p {
+.contribute_info p {
     font-size: 17px;
     font-weight: 500;
     text-align: left;
 }
 
-.info a {
+.contribute_info a {
     background-color: #0f172a;
     color: white;
     padding: 10px 20px;
@@ -53,29 +55,6 @@ a {
     font-weight: 600;
 }
 
-.info a:hover {
+.contribute_info a:hover {
     padding: 10px 30px;
-}
-
-@media (max-width: 1024px) {
-
-    .heroblock {
-        width: 95%;
-    }
-
-    .mainsvg {
-        width: 40%;
-        min-width: 200px;
-        height: 60%;
-    }
-
-    .mainsvg img {
-        width: 100%;
-        min-width: 250px;
-    }
-
-    .info {
-        width: 60%;
-        height: 60%;
-    }
 }

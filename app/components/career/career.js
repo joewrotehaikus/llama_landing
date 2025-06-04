@@ -1,1 +1,5 @@
-export default function Career() {}
+export default function Career() {
+    return(
+        <div></div>
+    )
+}
