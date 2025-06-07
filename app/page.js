@@ -6,9 +6,9 @@ import Contribute from "./components/contribute_landing/contribute";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Hero />
       <Contribute />
-    </div>
+    </main>
   );
 }

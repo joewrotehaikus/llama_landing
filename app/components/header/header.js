@@ -11,9 +11,9 @@ function Profile() {
 export default function Header() {
   return (
     <div className="main header">
-      <div className="logo">
+      <Link href="/" className="logo">
         <Profile />
-      </div>
+      </Link>
       <div className="nav-links">
         <Link href="#">Career</Link>
         <Link href="#">Projects</Link>
