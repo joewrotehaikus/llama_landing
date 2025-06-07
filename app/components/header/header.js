@@ -10,19 +10,19 @@ function Profile() {
 
 export default function Header() {
   return (
-    <div className="main header">
+    <header className="main header">
       <Link href="/" className="logo">
         <Profile />
       </Link>
       <div className="nav-links">
-        <Link href="#">Career</Link>
-        <Link href="#">Projects</Link>
-        <Link href="#">Membership</Link>
-        <Link href="#" className="cta-btn">
+        <Link href="/careers">Careers</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/membership">Membership</Link>
+        <Link href="/join" className="cta-btn">
           Join Us
         </Link>
       </div>
       <HamburgerMenu />
-    </div>
+    </header>
   );
 }
