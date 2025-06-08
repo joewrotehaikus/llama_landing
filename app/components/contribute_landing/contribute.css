@@ -1,10 +1,10 @@
 .contribute {
     display: flex;
+    flex-wrap: wrap;
     width: 80%;
     margin: auto;
     align-items: center;
     justify-content: space-between;
-    height: 300px;
     margin: 60px auto;
 }
 
@@ -16,7 +16,7 @@
 
 .contrisvg img {
     height: 100%;
-    min-width: 450px;
+    width: 100%;
 }
 
 .contribute_info {
@@ -33,6 +33,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
 }
 
 .contribute_info h1 {
@@ -57,4 +58,20 @@
 
 .contribute_info a:hover {
     padding: 10px 30px;
+}
+
+@media (max-width: 1024px) {
+    .contribute_info {
+        width: 100%;
+    }
+
+    .contrisvg {
+        width: 100%;
+        min-width: 200px;
+        height: 60%;
+    }
+
+    .contrisvg img {
+        width: 100%;
+    }
 }
