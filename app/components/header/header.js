@@ -18,6 +18,7 @@ export default function Header() {
         <Link href="/careers">Careers</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/membership">Membership</Link>
+        <Link href="/contact">Contact</Link>
         <Link href="/join" className="cta-btn">
           Join Us
         </Link>
