@@ -1,0 +1,44 @@
+.form {
+    margin: 0 auto;
+}
+
+.form label {
+    display: block;
+    margin: 0.75rem 0;
+    max-width: 40rem;
+    transition: max-height 3s ease-in-out;
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+.form label.hide {
+    max-height: 0;
+}
+
+.form textarea, .form input[type='text'] {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+}
+
+.form textarea {
+    height: 3rem;
+}
+
+.form input[type='checkbox'] {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+}
+
+.form button[type='submit'] {
+    background-color: #0f172a;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+}

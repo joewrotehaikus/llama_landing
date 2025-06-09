@@ -23,7 +23,7 @@ export default function Contribute() {
             Help Us Grow (Donation)
           </a>
           <a href="https://alpaca.llamacoop.dev/" target="_blank">
-            Design a course
+            Design a Course
           </a>
           <a href="https://github.com/LLAMA-Coop/Alpaca" target="_blank">
             Open Source
