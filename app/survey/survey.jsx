@@ -13,10 +13,14 @@ export default function Survey() {
   const [followup, setFollowup] = useState(false);
   const [preference, setPrefence] = useState("");
   const [address, setAddress] = useState("");
+  const [sent, setSent] = useState(false);
+  const [received, setReceived] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    setSent(true);
 
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     console.log(
       question1,
       question2,
@@ -28,6 +32,29 @@ export default function Survey() {
       preference,
       address
     );
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question1,
+          question2,
+          question3,
+          question4,
+          question5,
+          question6,
+          preference: followup ? preference : "",
+          address: followup ? address : "",
+        }),
+      });
+
+      if (response.ok) {
+        setReceived(true);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -36,6 +63,7 @@ export default function Survey() {
         What learning or practice apps have you used (or are you using now), and
         what are you using them for?
         <textarea
+          required={true}
           id="quest1"
           value={question1}
           onChange={(e) => setQuestion1(e.target.value)}
@@ -46,6 +74,7 @@ export default function Survey() {
         Does the app give you the right content for what you actually need to
         learn or practice? Why or why not?
         <textarea
+          required={true}
           id="quest2"
           value={question2}
           onChange={(e) => setQuestion2(e.target.value)}
@@ -56,6 +85,7 @@ export default function Survey() {
         When you're tested in real life (e.g. a conversation, an exam, a job
         task), how easily does the information come to mind?
         <textarea
+          required={true}
           id="quest3"
           value={question3}
           onChange={(e) => setQuestion3(e.target.value)}
@@ -66,6 +96,7 @@ export default function Survey() {
         When you have to use the knowledge—solve problems, talk to people, make
         decisions—how well does the app prepare you for that?
         <textarea
+          required={true}
           id="quest4"
           value={question4}
           onChange={(e) => setQuestion4(e.target.value)}
@@ -76,6 +107,7 @@ export default function Survey() {
         What do you do on your own to get more out of the app—things that boost
         your success beyond just using the app passively?
         <textarea
+          required={true}
           id="quest5"
           value={question5}
           onChange={(e) => setQuestion5(e.target.value)}
@@ -86,6 +118,7 @@ export default function Survey() {
         If you could wave a magic wand and improve one thing about your favorite
         learning app, what would it be?
         <textarea
+          required={true}
           id="quest6"
           value={question6}
           onChange={(e) => setQuestion6(e.target.value)}
@@ -111,6 +144,7 @@ export default function Survey() {
         How would you prefer we contact you? (example: email, Discord, WhatsApp,
         SMS)
         <input
+          required={followup}
           id="preference"
           type="text"
           value={preference}
@@ -120,6 +154,7 @@ export default function Survey() {
       <label className={followup ? "" : style.hide} htmlFor="address">
         Which number, username, email address, etc. do we use to contact you?
         <input
+          required={followup}
           id="address"
           type="text"
           value={address}
@@ -127,7 +162,16 @@ export default function Survey() {
         />
       </label>
 
-      <button type="submit">Submit</button>
+      {received && (
+        <p className={style.thanks}>
+          Thank you so much for taking the survey! We have received your
+          answers.
+        </p>
+      )}
+
+      <button disabled={sent} type="submit">
+        Submit
+      </button>
     </form>
   );
 }

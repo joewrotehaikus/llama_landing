@@ -21,7 +21,7 @@
     margin-top: 0.25rem;
     font-family:'Times New Roman', Times, serif;
     font-size: 1.2rem;
-    padding: 0.2rem;
+    padding: 0.5rem;
 }
 
 .form textarea {
@@ -36,9 +36,16 @@
 
 .form button[type='submit'] {
     background-color: #0f172a;
-    color: white !important;
+    color: white;
     padding: 10px 20px;
     border-radius: 8px;
     transition: 0.3s ease-in-out;
     font-weight: 600;
+}
+
+.thanks {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
 }
