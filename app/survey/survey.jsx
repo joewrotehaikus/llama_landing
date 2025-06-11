@@ -58,7 +58,7 @@ export default function Survey() {
   }
 
   return (
-    <form className={style.form} onSubmit={handleSubmit}>
+    <div className={style.form}>
       <label htmlFor="quest1">
         What learning or practice apps have you used (or are you using now), and
         what are you using them for?
@@ -169,9 +169,13 @@ export default function Survey() {
         </p>
       )}
 
-      <button disabled={sent} type="submit">
+      <button
+        disabled={sent}
+        className={style.btn_submit}
+        onClick={handleSubmit}
+      >
         Submit
       </button>
-    </form>
+    </div>
   );
 }

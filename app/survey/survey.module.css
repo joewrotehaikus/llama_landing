@@ -34,7 +34,7 @@
     width: 2rem;
 }
 
-.form button[type='submit'] {
+.btn_submit {
     background-color: #0f172a;
     color: white;
     padding: 10px 20px;
