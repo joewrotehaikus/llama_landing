@@ -1,0 +1,25 @@
+.about_landing{
+    width: var(--default_div_width);
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.about_landing h2{
+    font-size: var(--heading_size1);
+    margin-bottom: 20px;
+}
+
+.about_landing p{
+    font-weight: 500;
+}
+
+.about_gallery{
+    display: flex;
+    width: 100%;
+}
+
+.about_gallery img{
+    width: 30%;
+    margin: auto;
+}

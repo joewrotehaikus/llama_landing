@@ -4,7 +4,7 @@ a {
 
 .heroblock {
     display: flex;
-    width: 80%;
+    width: var(--default_div_width);
     margin: auto;
     align-items: center;
     justify-content: space-between;

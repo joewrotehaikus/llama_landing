@@ -1,6 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --default_div_width: 70%;
+  --heading_size1 : 35px;
 }
 
 /* @media (prefers-color-scheme: dark) {
