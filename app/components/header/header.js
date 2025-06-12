@@ -1,29 +1,29 @@
-import './header.css';
-import HamburgerMenu from '../hamburger/hamburger';
+import "./header.css";
+import HamburgerMenu from "../hamburger/hamburger";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "@/public/images/logo.svg";
 
 function Profile() {
-  return (
-    <img
-      src="/images/logo.svg"
-      alt="LLAMA LLC Logo"
-    />
-  );
+  return <Image src={logo} alt="LLAMA LLC Logo" />;
 }
 
 export default function Header() {
-    return (
-        <div className="main header">
-            <div className="logo">
-                <Profile />
-            </div>
-            <div className="nav-links">
-                <a href="#" alt="Career page">Career</a>
-                <a href="#">Projects</a>
-                <a href="#">Membership</a>
-                <a href="#" className="cta-btn">Join Us</a>
-            </div>
-            <HamburgerMenu />
-        </div>
-          
-    )
+  return (
+    <header className="main header">
+      <Link href="/" className="logo">
+        <Profile />
+      </Link>
+      <div className="nav-links">
+        <Link href="/careers">Careers</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/membership">Membership</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/join" className="cta-btn">
+          Join Us
+        </Link>
+      </div>
+      <HamburgerMenu />
+    </header>
+  );
 }

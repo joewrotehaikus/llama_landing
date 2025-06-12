@@ -1,27 +1,34 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import './hamburger.css';
+import { useState } from "react";
+import "./hamburger.css";
+import Link from "next/link";
 
 const HamburgerMenu = () => {
-    const [open, setOpen] = useState(false);
-  
-    const toggleMenu = () => setOpen(!open);
-  
-    return (
-      <div className='ham_menu_main'>
-        <button className="hamburger-toggle" onClick={toggleMenu}>
-          ☰
-        </button>
-  
-        <div className={`hamburger-menu ${open ? 'open' : ''}`}>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-          {/* Add more links if needed */}
-        </div>
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => setOpen(!open);
+
+  return (
+    <div className={`ham_menu_main ${open ? "open" : ""}`}>
+      <button className="hamburger-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
+
+      <div
+        className={`hamburger-menu ${open ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
+        <Link href="/">Home</Link>
+        <Link href="/careers">Careers</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/membership">Membership</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
+        {/* Add more links if needed */}
       </div>
-    );
-  };
-  
-  export default HamburgerMenu;
+    </div>
+  );
+};
+
+export default HamburgerMenu;
