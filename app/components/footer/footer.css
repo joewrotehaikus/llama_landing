@@ -1,5 +1,6 @@
 .footer {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 75%;
     margin: auto;
@@ -7,6 +8,7 @@
 
 .footer-Upper {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
 }
@@ -43,4 +45,17 @@
 .footer-Lower{
     font-size: 14px;
     font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .footer {
+        width: 90%;
+        margin: 0.5rem;
+    }
+    .footer-Upper-left {
+        width: 100%;
+    }
+    .footer-Upper-right {
+        width: 100%;
+    }
 }
