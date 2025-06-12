@@ -1,51 +1,70 @@
 .form {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-.form label {
-    display: block;
-    margin: 0.75rem 0;
-    max-width: 40rem;
-    transition: max-height 3s ease-in-out;
-    overflow: hidden;
-    max-height: 100vh;
+.form label, .form div {
+  display: block;
+  margin: 0.75rem 0;
+  max-width: 40rem;
+  transition: max-height 3s ease-in-out;
+  overflow: hidden;
+  max-height: 100vh;
 }
 
-.form label.hide {
-    max-height: 0;
+.form label.hide, .form div.hide {
+  max-height: 0;
 }
 
-.form textarea, .form input[type='text'] {
-    display: block;
-    width: 100%;
-    margin-top: 0.25rem;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 1.2rem;
-    padding: 0.5rem;
+.form textarea,
+.form input[type="text"] {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
 }
 
 .form textarea {
-    height: 3rem;
+  height: 6rem;
 }
 
-.form input[type='checkbox'] {
-    display: block;
-    height: 2rem;
-    width: 2rem;
+.form input[type="checkbox"] {
+  display: block;
+  height: 2rem;
+  width: 2rem;
 }
 
 .btn_submit {
-    background-color: #0f172a;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: 0.3s ease-in-out;
-    font-weight: 600;
+  background-color: #0f172a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
 }
 
 .thanks {
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: black;
-    color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+}
+
+ul.checkboxList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+ul.checkboxList label {
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+ul.checkboxList input[type="checkbox"],
+ul.checkboxList input[type="text"] {
+  display: inline;
+  margin-right: 0.25rem;
 }
