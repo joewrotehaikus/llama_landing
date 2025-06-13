@@ -16,7 +16,7 @@ export default function MembershipPage() {
         recognition of your contributions to our shared mission.
       </p>
 
-      <h2>Who Can Become a Member?</h2>
+      <h3>Who Can Become a Member?</h3>
       <p>
         Our operating agreement outlines the basic requirements for membership,
         ensuring that members are meaningfully involved in our work. To be
@@ -38,7 +38,7 @@ export default function MembershipPage() {
         discretion, based on the needs and direction of the company.
       </p>
 
-      <h2>How We Work</h2>
+      <h3>How We Work</h3>
       <p>
         As we continue developing and monetizing our projects, most of our
         current contracts are service exchanges, not paid positions. We
@@ -47,7 +47,7 @@ export default function MembershipPage() {
         scale.
       </p>
 
-      <h2>Join the Team</h2>
+      <h3>Join the Team</h3>
       <p>
         If you're excited by our mission and think you could help bring
         value—whether through code, design, outreach, or new ideas—you might be

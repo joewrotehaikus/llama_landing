@@ -17,7 +17,7 @@ export default function AboutPage() {
         that reflect the talents and interests of our members.
       </p>
 
-      <h2>Building Together, Growing Together</h2>
+      <h3>Building Together, Growing Together</h3>
       <p>
         We're more than just developers—we're mentors, too. Through our
         Mentorship & Internship Program, we help newcomers to web development
@@ -26,7 +26,7 @@ export default function AboutPage() {
         track record of their work—visible on GitHub and ready to showcase.
       </p>
 
-      <h2>How We Operate</h2>
+      <h3>How We Operate</h3>
       <p>
         Our company is democratically run. Major decisions are made
         collectively, and our Board of Directors is elected every six months. To
@@ -39,7 +39,7 @@ export default function AboutPage() {
         here.
       </p>
 
-      <h2>Our Name Is Our Mission</h2>
+      <h3>Our Name Is Our Mission</h3>
       <p>
         We chose the name Learning, Language, and Multicultural Advancement
         because it says exactly what we’re about. Our mission is right there in
