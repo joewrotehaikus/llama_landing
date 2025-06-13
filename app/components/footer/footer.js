@@ -27,7 +27,10 @@ export default function Footer() {
           <Image src={logo} height={100} alt="LLAMA LLC Logo" />
         </div>
       </div>
-      <div className="footer-Lower">LLAMA LLC based out of Virginia, USA</div>
+      <div className="footer-Lower">
+        Learning, Language, and Multicultural Advancement, LLC based out of
+        Virginia, USA
+      </div>
     </footer>
   );
 }
