@@ -95,6 +95,14 @@ a.primary {
   max-width: 5rem;
 }
 
+.link {
+  display: inline-block;
+  color: var(--background);
+  background-color: var(--foreground);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
 a.secondary {
   border-color: var(--gray-alpha-200);
   min-width: 180px;
