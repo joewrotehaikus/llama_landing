@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 75%;
-    margin: 100px auto;
+    margin: 0px auto;
     height: 400px;
 }
 
@@ -13,6 +13,7 @@
     width: 100%;
     margin: auto;
     justify-content: space-between;
+    color: var(--background);
 }
 
 .perk {

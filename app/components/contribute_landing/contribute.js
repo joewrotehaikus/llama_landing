@@ -1,5 +1,4 @@
 import "./contribute.css";
-import Link from "next/link";
 import Image from "next/image";
 import alpacainterface from "@/public/images/img8.png";
 

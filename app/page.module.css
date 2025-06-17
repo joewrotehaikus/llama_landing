@@ -35,6 +35,7 @@
   margin: 2rem;
 }
 
+
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -122,6 +123,45 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
+}
+
+/*CARDS*/
+.cardPage{
+  display: flex;
+  width: 80%;
+  margin: 50px auto 100px auto;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 80%;
+  color: white;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card{
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--color1);
+  text-align: left;
+}
+
+.card h3{
+  margin: 10px auto;
+}
+
+.card p{
+  font-size: 14px;
+}
+
+.card_bold{
+  font-weight: 600;
 }
 
 /* Enable hover only on non-touch devices */

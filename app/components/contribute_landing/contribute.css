@@ -9,7 +9,7 @@
 }
 
 .contrisvg {
-    width: 50%;
+    width: 40%;
     min-width: 400px;
     height: 100%;
 }
@@ -22,11 +22,15 @@
 .contribute_info {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
     margin: auto;
     align-items: start;
     height: 90%;
     justify-content: space-between;
+}
+
+.contribute_info * {
+    margin: 10px 0px;
 }
 
 .contribute_btns {
@@ -39,6 +43,7 @@
 .contribute_info h1 {
     font-size: 35px;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .contribute_info p {
@@ -54,6 +59,7 @@
     border-radius: 8px;
     transition: 0.3s ease-in-out;
     font-weight: 600;
+    font-size: 14px;
 }
 
 .contribute_info a:hover {

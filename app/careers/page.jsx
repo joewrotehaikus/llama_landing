@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function CareersPage() {
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} ${styles.cardPage}`}>
       <h2>Careers and Work Opportunities</h2>
 
       <h3>Help Us Build Something Meaningful</h3>
@@ -37,6 +37,38 @@ export default function CareersPage() {
         <li>Community outreach and marketing</li>
         <li>Project or product management</li>
       </ul>
+            <div className={`${styles.cards}`}>
+        <div className={`${styles.card}`}>
+          <h3>Intern JS Developer</h3>
+          <p><span className={`${styles.card_bold}`}>Type:</span> Remote</p>
+          <p><span className={`${styles.card_bold}`}>Duration:</span> 6 months</p>
+          <p><span className={`${styles.card_bold}`}>Requirements:</span> Basic knowledge of JS, Demo projects, Willingness to learn.</p>
+        </div>
+        <div className={`${styles.card}`}>
+          <h3>Intern JS Developer</h3>
+          <p><span className={`${styles.card_bold}`}>Type:</span> Remote</p>
+          <p><span className={`${styles.card_bold}`}>Duration:</span> 6 months</p>
+          <p><span className={`${styles.card_bold}`}>Requirements:</span> Basic knowledge of JS, Demo projects, Willingness to learn.</p>
+        </div>
+        <div className={`${styles.card}`}>
+          <h3>Intern JS Developer</h3>
+          <p><span className={`${styles.card_bold}`}>Type:</span> Remote</p>
+          <p><span className={`${styles.card_bold}`}>Duration:</span> 6 months</p>
+          <p><span className={`${styles.card_bold}`}>Requirements:</span> Basic knowledge of JS, Demo projects, Willingness to learn.</p>
+        </div>
+        <div className={`${styles.card}`}>
+          <h3>Intern JS Developer</h3>
+          <p><span className={`${styles.card_bold}`}>Type:</span> Remote</p>
+          <p><span className={`${styles.card_bold}`}>Duration:</span> 6 months</p>
+          <p><span className={`${styles.card_bold}`}>Requirements:</span> Basic knowledge of JS, Demo projects, Willingness to learn.</p>
+        </div>
+        <div className={`${styles.card}`}>
+          <h3>Intern JS Developer</h3>
+          <p><span className={`${styles.card_bold}`}>Type:</span> Remote</p>
+          <p><span className={`${styles.card_bold}`}>Duration:</span> 6 months</p>
+          <p><span className={`${styles.card_bold}`}>Requirements:</span> Basic knowledge of JS, Demo projects, Willingness to learn.</p>
+        </div>
+      </div>
       <p>
         Even if your background doesn’t fall into one of those areas, we still
         encourage you to apply. We grow through collaboration and shared
