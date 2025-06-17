@@ -16,16 +16,6 @@ export default function CareersPage() {
           <p><span className={`${styles.card_bold}`}>Type:</span> Educational</p>
           <p><span className={`${styles.card_bold}`}>Url:</span> alpaca.com</p>
         </div>
-        <div className={`${styles.card}`}>
-          <h3>Llemur</h3>
-          <p><span className={`${styles.card_bold}`}>Type:</span> Educational</p>
-          <p><span className={`${styles.card_bold}`}>Url:</span> alpaca.com</p>
-        </div>
-        <div className={`${styles.card}`}>
-          <h3>Alpaca</h3>
-          <p><span className={`${styles.card_bold}`}>Type:</span> Educational</p>
-          <p><span className={`${styles.card_bold}`}>Url:</span> alpaca.com</p>
-        </div>
       </div>
     </main>
   );

@@ -16,6 +16,7 @@ export default function CareersPage() {
           <p><span className={`${styles.card_bold}`}>Type:</span> Remote</p>
           <p><span className={`${styles.card_bold}`}>Duration:</span> 6 months</p>
           <p><span className={`${styles.card_bold}`}>Requirements:</span> Basic knowledge of JS, Demo projects, Willingness to learn.</p>
+          <button>Apply Now</button>
         </div>
         <div className={`${styles.card}`}>
           <h3>Intern JS Developer</h3>
