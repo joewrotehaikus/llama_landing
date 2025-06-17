@@ -35,7 +35,6 @@
   margin: 2rem;
 }
 
-
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -70,10 +69,7 @@
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -126,8 +122,9 @@ a.secondary {
 }
 
 /*CARDS*/
-.cardPage{
+.cardPage {
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   margin: 50px auto 100px auto;
   text-align: center;
@@ -135,15 +132,15 @@ a.secondary {
 
 .cards {
   display: grid;
-  justify-content: space-evenly;
-  margin: auto;
+  justify-items: center;
+  margin: 0 auto;
   width: 80%;
   color: white;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.card{
+.card {
   width: 300px;
   height: 200px;
   padding: 20px;
@@ -152,15 +149,15 @@ a.secondary {
   text-align: left;
 }
 
-.card h3{
+.card h3 {
   margin: 10px auto;
 }
 
-.card p{
+.card p {
   font-size: 14px;
 }
 
-.card_bold{
+.card_bold {
   font-weight: 600;
 }
 
