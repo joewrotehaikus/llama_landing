@@ -16,7 +16,7 @@ export default function Hero() {
           Whether you&apos;re studying, researching, or just learning for fun, Alpaca
           helps you retain what matters most.
         </p>
-        <a href="https://alpaca.llamacoop.dev/" target="_blanck">
+        <a href="https://alpaca.llamacoop.dev/" target="_blank">
           Try Alpaca
         </a>
       </div>
