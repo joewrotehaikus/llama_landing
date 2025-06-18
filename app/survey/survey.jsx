@@ -21,17 +21,6 @@ export default function Survey() {
     setSent(true);
 
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    console.log(
-      question1,
-      question2,
-      question3,
-      question4,
-      question5,
-      question6,
-      followup,
-      preference,
-      address
-    );
 
     try {
       const response = await fetch(apiUrl, {

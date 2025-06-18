@@ -127,7 +127,15 @@ a.secondary {
   flex-wrap: wrap;
   width: 80%;
   margin: 50px auto 100px auto;
+}
+
+.cardPage h2, .cardPage h3 {
   text-align: center;
+}
+
+.cardPage h4 {
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .cards {
@@ -142,7 +150,6 @@ a.secondary {
 
 .card {
   width: 300px;
-  height: 200px;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--color1);
@@ -157,8 +164,18 @@ a.secondary {
   font-size: 14px;
 }
 
-.card_bold {
+.card ul {
+  list-style-type: none;
+  margin-left: 0.5rem;
+}
+
+.card_bold, p.card_bold {
   font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card_desc {
+  margin-top: 1rem;
 }
 
 /* Enable hover only on non-touch devices */

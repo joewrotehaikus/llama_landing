@@ -7,7 +7,6 @@ export const metadata = {
 };
 
 export default function CareersPage() {
-  // Pass in jobs opps to workApplication
   const opportunities = [
     {
       title: "Intern JS Developer",
@@ -46,6 +45,18 @@ export default function CareersPage() {
       description:
         "We are preparing to market to people who want custom coding. On occasion, our current members will not have time to meet the project goals by deadline. This is your chance to take some of the money earned for the project in exchange for helping us to finish on deadline.",
     },
+    {
+      title: "Something Special to Offer",
+      location: "Remote",
+      duration: "To be determined",
+      requirements: [
+        "Verifiable skills in programming",
+        "Willingness to adhere to our coding standards",
+        "Good communication skills and positive attitude",
+      ],
+      description:
+        "Do you think you know something we don't, but we should? You might be right! Put in your pitch, and we'll hear you out.",
+    },
   ];
 
   return (
@@ -60,28 +71,21 @@ export default function CareersPage() {
         connect across cultures, we want to hear from you.
       </p>
       <p>
-        Most of our current opportunities are service-based contracts rather
-        than paid roles, as we're still working toward sustainable monetization.
-        But whether you're a developer, designer, writer, educator, or
-        organizer, your contribution could be the key to unlocking our next
-        stage of growth.
+        Some of our current opportunities are not paid roles. But whether you're
+        a developer, designer, writer, educator, or organizer, your contribution
+        could be the key to unlocking our next stage of growth. All work is
+        considered when proposing a person for membership, thus giving them
+        voting rights.
       </p>
 
       <h3>Open Opportunities</h3>
       <p>
         We accept general applications from people with skills or interests in:
       </p>
-      <ul>
-        <li>Frontend or backend web development</li>
-        <li>UI/UX design</li>
-        <li>Education and curriculum design</li>
-        <li>Community outreach and marketing</li>
-        <li>Project or product management</li>
-      </ul>
       <div className={`${styles.cards}`}>
         {opportunities.map((opp) => (
           <div className={`${styles.card}`} key={opp.title}>
-            <h3>{opp.title}</h3>
+            <h4>{opp.title}</h4>
             <p>
               <span className={styles.card_bold}>Location: </span>
               {opp.location}
@@ -96,74 +100,9 @@ export default function CareersPage() {
                 <li key={req}>{req}</li>
               ))}
             </ul>
-            <p>{opp.description}</p>
+            <p className={styles.card_desc}>{opp.description}</p>
           </div>
         ))}
-        <div className={`${styles.card}`}>
-          <h3>Intern JS Developer</h3>
-          <p>
-            <span className={`${styles.card_bold}`}>Type:</span> Remote
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Duration:</span> 6 months
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Requirements:</span> Basic
-            knowledge of JS, Demo projects, Willingness to learn.
-          </p>
-        </div>
-        <div className={`${styles.card}`}>
-          <h3>Intern JS Developer</h3>
-          <p>
-            <span className={`${styles.card_bold}`}>Type:</span> Remote
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Duration:</span> 6 months
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Requirements:</span> Basic
-            knowledge of JS, Demo projects, Willingness to learn.
-          </p>
-        </div>
-        <div className={`${styles.card}`}>
-          <h3>Intern JS Developer</h3>
-          <p>
-            <span className={`${styles.card_bold}`}>Type:</span> Remote
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Duration:</span> 6 months
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Requirements:</span> Basic
-            knowledge of JS, Demo projects, Willingness to learn.
-          </p>
-        </div>
-        <div className={`${styles.card}`}>
-          <h3>Intern JS Developer</h3>
-          <p>
-            <span className={`${styles.card_bold}`}>Type:</span> Remote
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Duration:</span> 6 months
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Requirements:</span> Basic
-            knowledge of JS, Demo projects, Willingness to learn.
-          </p>
-        </div>
-        <div className={`${styles.card}`}>
-          <h3>Intern JS Developer</h3>
-          <p>
-            <span className={`${styles.card_bold}`}>Type:</span> Remote
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Duration:</span> 6 months
-          </p>
-          <p>
-            <span className={`${styles.card_bold}`}>Requirements:</span> Basic
-            knowledge of JS, Demo projects, Willingness to learn.
-          </p>
-        </div>
       </div>
       <p>
         Even if your background doesn’t fall into one of those areas, we still
@@ -175,7 +114,7 @@ export default function CareersPage() {
         staying connected with the team.
       </p>
 
-      <WorkApplication />
+      <WorkApplication opportunities={opportunities} />
     </main>
   );
 }
