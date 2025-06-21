@@ -57,6 +57,18 @@ export default function CareersPage() {
       description:
         "Do you think you know something we don't, but we should? You might be right! Put in your pitch, and we'll hear you out.",
     },
+    {
+      title: "Sales",
+      location: "Remote",
+      duration: "6 months",
+      requirements: [
+        "Commitment to honesty and integrity",
+        "Ability to learn and explain our products and services",
+        "Ability to seek genuine prospects with a product and service that is in their interest",
+      ],
+      description:
+        "Good products and services still don't sell themselves! For a limited time only, we are offering a generous 40% commission on some of our products and services that have not yet been widely promoted.",
+    },
   ];
 
   return (

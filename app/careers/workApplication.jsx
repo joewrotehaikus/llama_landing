@@ -16,10 +16,33 @@ export default function WorkApplication({ opportunities }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setSent(true);
+
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     try {
-    } catch (e) {}
+      setSent(true);
+      const response = await fetch(apiUrl + "/careers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          applyingFor,
+          experience,
+          portfolio,
+          github,
+          about,
+        }),
+      });
+
+      if (response.ok) {
+        setReceived(true);
+      } else {
+        setSent(false);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (

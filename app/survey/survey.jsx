@@ -18,12 +18,12 @@ export default function Survey() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setSent(true);
 
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     try {
-      const response = await fetch(apiUrl, {
+      setSent(true);
+      const response = await fetch(apiUrl + "/survey", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
