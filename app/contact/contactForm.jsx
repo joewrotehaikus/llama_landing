@@ -23,6 +23,12 @@ export default function ContactForm() {
     console.log({ name, organization, interestedIn, othInt, description });
   }, [name, organization, interestedIn, othInt, description]);
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+    
+    
+  }
+
   const interestsOpts = [
     "Custom App",
     "Tutoring/Mentoring",
