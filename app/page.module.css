@@ -35,7 +35,6 @@
   margin: 2rem;
 }
 
-
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -70,10 +69,7 @@
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -94,6 +90,14 @@ a.primary {
   color: var(--background);
   padding: 0.5rem;
   max-width: 5rem;
+}
+
+.link {
+  display: inline-block;
+  color: var(--background);
+  background-color: var(--foreground);
+  padding: 0.25rem;
+  border-radius: 4px;
 }
 
 a.secondary {
@@ -120,18 +124,27 @@ a.secondary {
 /*CARDS*/
 .cardPage {
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   margin: 50px auto 100px auto;
+}
+
+.cardPage h2, .cardPage h3 {
   text-align: center;
+}
+
+.cardPage h4 {
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .cards {
   display: grid;
-  justify-content: space-evenly;
-  margin: auto;
+  justify-items: center;
+  margin: 0 auto;
   width: 80%;
   color: white;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -160,6 +173,20 @@ a.secondary {
   width: 100%;
 }
 
+.card ul {
+  list-style-type: none;
+  margin-left: 0.5rem;
+}
+
+.card_bold, p.card_bold {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card_desc {
+  margin-top: 1rem;
+}
+  
 .card button {
   padding: 5px 15px;
   background-color: var(--background);

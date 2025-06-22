@@ -16,12 +16,12 @@ export default function Header() {
       </Link>
       <div className="nav-links">
         <Link href="/careers">Careers</Link>
-        <Link href="/projects">Projects</Link>
         <Link href="/membership">Membership</Link>
+        <Link href="/about">About</Link>
         <Link href="/contact">Contact</Link>
-        <Link href="/join" className="cta-btn">
+        {/* <Link href="/join" className="cta-btn">
           Join Us
-        </Link>
+        </Link> */}
       </div>
       <HamburgerMenu />
     </header>
