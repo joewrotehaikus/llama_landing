@@ -21,9 +21,35 @@
     height: 200px;
     background-color: #0f172a;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.perk h3{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .membership-perks h2 {
     font-size: 30px;
     font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .membership-perks{
+        width: 85%;
+    }
+    .perkcontainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
+    }
+    .perk{
+        width: 150px;
+        height: 150px;
+        margin: 10px auto;
+    }
 }

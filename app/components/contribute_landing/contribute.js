@@ -19,7 +19,7 @@ export default function Contribute() {
         </p>
         <div className="contribute_btns">
           <a href="https://buy.stripe.com/3cI5kD4om7hi4kL885aVa00">
-            Help Us Grow (Donation)
+            Donate
           </a>
           <a href="https://alpaca.llamacoop.dev/" target="_blank">
             Design a Course
