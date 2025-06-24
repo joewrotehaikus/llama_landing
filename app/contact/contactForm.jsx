@@ -197,6 +197,7 @@ export default function ContactForm() {
               );
               setCurrency(currObj);
               setMinBudget(currObj.min);
+              setMaxBudget((prev) => (prev > currObj.min ? prev : currObj.min));
             }}
           >
             {stripeCommonCurrencies.map((c) => (
