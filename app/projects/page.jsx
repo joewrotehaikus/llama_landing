@@ -5,7 +5,7 @@ export const metadata = {
   description: "Work opportunities in our company",
 };
 
-export default function CareersPage() {
+export default function ProjectsPage() {
   return (
     <main className={`${styles.main} ${styles.cardPage}`}>
       <h2>Projects</h2>
@@ -13,8 +13,12 @@ export default function CareersPage() {
       <div className={`${styles.cards}`}>
         <div className={`${styles.card}`}>
           <h3>Alpaca</h3>
-          <p><span className={`${styles.card_bold}`}>Type:</span> Educational</p>
-          <p><span className={`${styles.card_bold}`}>Url:</span> alpaca.com</p>
+          <p>
+            <span className={`${styles.card_bold}`}>Type:</span> Educational
+          </p>
+          <p>
+            <span className={`${styles.card_bold}`}>Url:</span> alpaca.com
+          </p>
         </div>
       </div>
     </main>
