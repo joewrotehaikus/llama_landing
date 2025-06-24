@@ -150,18 +150,27 @@ a.secondary {
 
 .card {
   width: 300px;
+  height: 250px;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--color1);
   text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.card * {
+  margin: auto;
 }
 
 .card h3 {
+  font-size: 26px;
   margin: 10px auto;
 }
 
 .card p {
   font-size: 14px;
+  width: 100%;
 }
 
 .card ul {
@@ -176,6 +185,24 @@ a.secondary {
 
 .card_desc {
   margin-top: 1rem;
+}
+  
+.card button {
+  padding: 5px 15px;
+  background-color: var(--background);
+  border-radius: 4px;
+  border: 0px;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: 0.4s ease-in-out;
+}
+
+.card button:hover {
+  padding: 5px 50px;
+}
+
+.card_bold {
+  font-size: 16px;
 }
 
 /* Enable hover only on non-touch devices */
