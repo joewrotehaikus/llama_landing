@@ -1,7 +1,7 @@
 "use client";
 
 import style from "../survey/survey.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -16,17 +16,40 @@ export default function ContactForm() {
     label: "US Dollar",
     min: 100,
   });
-  const [contactPref, setContactPref] = useState("email");
-  const [email, setEmail] = useState("");
-
-  useEffect(() => {
-    console.log({ name, organization, interestedIn, othInt, description });
-  }, [name, organization, interestedIn, othInt, description]);
+  const [contactPref, setContactPref] = useState("");
+  const [contactInfo, setContactInfo] = useState("");
+  const [sent, setSent] = useState(false);
+  const [received, setReceived] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
-    
-    
+
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    try {
+      setSent(true);
+      const response = await fetch(apiUrl + "/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          organization,
+          interestedIn,
+          description,
+          minBudget,
+          maxBudget,
+          currency: currency.currency,
+          contactPref,
+          contactInfo,
+        }),
+      });
+
+      if (response.ok) {
+        setReceived(true);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   const interestsOpts = [
@@ -57,6 +80,12 @@ export default function ContactForm() {
     { currency: "THB", label: "Thai Baht", min: 3650 },
   ];
 
+  const contactOptions = [
+    { label: "Email", value: "email" },
+    { label: "WhatsApp", value: "WhatsApp" },
+    { label: "Discord", value: "Discord" },
+  ];
+
   return (
     <div className={style.form}>
       <label htmlFor="name">
@@ -64,6 +93,7 @@ export default function ContactForm() {
         <input
           type="text"
           id="name"
+          autoComplete="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -73,6 +103,7 @@ export default function ContactForm() {
         Are you here on behalf of a company or organization? Enter its name.
         <input
           type="text"
+          autoComplete="organization"
           id="organization"
           value={organization}
           onChange={(e) => setOrganization(e.target.value)}
@@ -166,6 +197,7 @@ export default function ContactForm() {
               );
               setCurrency(currObj);
               setMinBudget(currObj.min);
+              setMaxBudget((prev) => (prev > currObj.min ? prev : currObj.min));
             }}
           >
             {stripeCommonCurrencies.map((c) => (
@@ -175,11 +207,13 @@ export default function ContactForm() {
             ))}
           </select>
         </label>
+
         <label htmlFor="minBudget">
           Lower range of your budget (Sorry, we cannot take orders for less than{" "}
           {currency.min} {currency.currency})
           <input
             type="number"
+            id="minBudget"
             min={currency.min}
             value={minBudget}
             onChange={(e) => {
@@ -197,16 +231,64 @@ export default function ContactForm() {
           Upper range of your budget
           <input
             type="number"
+            id="maxBudget"
             min={currency.min}
             value={maxBudget}
             onChange={(e) =>
-              setMaxBudget((prev) =>
+              setMaxBudget(
                 e.target.value > minBudget ? e.target.value : minBudget
               )
             }
           />
         </label>
       </div>
+
+      <label htmlFor="contactPref">
+        How would you like for us to contact you back?
+        <select
+          id="contactPref"
+          value={contactPref}
+          onChange={(e) => setContactPref(e.target.value)}
+        >
+          <option value="">Select</option>
+          {contactOptions.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label htmlFor="contactInfo">
+        {contactPref === "" && "How should we contact you?"}
+        {contactPref === "email" && "What is your email address?"}
+        {contactPref === "WhatsApp" && "What is your WhatsApp number?"}
+        {contactPref === "Discord" &&
+          "What is your Discord username? Please note that your privacy settings will need to permit a message from one of us."}
+
+        <input
+          id="contactInfo"
+          value={contactInfo}
+          onChange={(e) => setContactInfo(e.target.value)}
+        />
+      </label>
+
+      {received && (
+        <p className={style.thanks}>
+          Thank you so much for contacting us! Give us at least one week. We
+          should get back to you by then using your prefered contact method. If
+          we cannot, we may have had trouble using your contact method, so send
+          us another message.
+        </p>
+      )}
+
+      <button
+        disabled={sent}
+        className={style.btn_submit}
+        onClick={handleSubmit}
+      >
+        Submit
+      </button>
     </div>
   );
 }

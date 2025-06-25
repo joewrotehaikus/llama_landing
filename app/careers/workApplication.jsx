@@ -52,6 +52,7 @@ export default function WorkApplication({ opportunities }) {
         <input
           type="text"
           id="name"
+          autoComplete="name"
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -62,6 +63,7 @@ export default function WorkApplication({ opportunities }) {
         <input
           type="email"
           id="email"
+          autoComplete="email"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -96,6 +98,7 @@ export default function WorkApplication({ opportunities }) {
         <input
           type="text"
           id="portfolio"
+          autoComplete="url"
           required
           value={portfolio}
           onChange={(e) => setPortfolio(e.target.value)}
