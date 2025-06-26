@@ -17,6 +17,7 @@
 
 .about_gallery{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin: 30px auto;
 }

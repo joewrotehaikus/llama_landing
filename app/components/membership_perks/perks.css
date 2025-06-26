@@ -5,11 +5,11 @@
     align-items: center;
     width: 75%;
     margin: 0px auto;
-    height: 400px;
 }
 
 .perkcontainer {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin: auto;
     justify-content: space-between;
@@ -17,13 +17,45 @@
 }
 
 .perk {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
     width: 200px;
     height: 200px;
     background-color: #0f172a;
     border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    flex-direction: column;
+}
+
+.perk h3{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .membership-perks h2 {
     font-size: 30px;
     font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .membership-perks{
+        width: 85%;
+    }
+    .perkcontainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
+    }
+    .perk{
+        width: 150px;
+        height: 150px;
+        margin: 10px auto;
+    }
 }

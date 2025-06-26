@@ -79,5 +79,11 @@
 
     .contrisvg img {
         width: 100%;
+        display: none;
+    }
+
+    .contribute_btns{
+        flex-direction: column;
+        text-align: center;
     }
 }

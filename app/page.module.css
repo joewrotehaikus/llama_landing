@@ -35,7 +35,6 @@
   margin: 2rem;
 }
 
-
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -70,10 +69,7 @@
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -94,6 +90,14 @@ a.primary {
   color: var(--background);
   padding: 0.5rem;
   max-width: 5rem;
+}
+
+.link {
+  display: inline-block;
+  color: var(--background);
+  background-color: var(--foreground);
+  padding: 0.25rem;
+  border-radius: 4px;
 }
 
 a.secondary {
@@ -118,42 +122,87 @@ a.secondary {
 }
 
 /*CARDS*/
-.cardPage{
+.cardPage {
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   margin: 50px auto 100px auto;
+}
+
+.cardPage h2, .cardPage h3 {
   text-align: center;
+}
+
+.cardPage h4 {
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .cards {
   display: grid;
-  justify-content: space-evenly;
-  margin: auto;
+  justify-items: center;
+  margin: 0 auto;
   width: 80%;
   color: white;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.card{
+.card {
   width: 300px;
-  height: 200px;
+  height: 250px;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--color1);
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.card h3{
+.card * {
+  margin: auto;
+}
+
+.card h3 {
+  font-size: 26px;
   margin: 10px auto;
 }
 
-.card p{
+.card p {
   font-size: 14px;
+  width: 100%;
 }
 
-.card_bold{
+.card ul {
+  list-style-type: none;
+  margin-left: 0.5rem;
+}
+
+.card_bold, p.card_bold {
   font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card_desc {
+  margin-top: 1rem;
+}
+  
+.card button {
+  padding: 5px 15px;
+  background-color: var(--background);
+  border-radius: 4px;
+  border: 0px;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: 0.4s ease-in-out;
+}
+
+.card button:hover {
+  padding: 5px 50px;
+}
+
+.card_bold {
+  font-size: 16px;
 }
 
 /* Enable hover only on non-touch devices */

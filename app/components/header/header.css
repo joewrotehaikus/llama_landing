@@ -17,6 +17,7 @@
 
 .nav-links {
     display: flex;
+    flex-wrap: wrap;
     width: 50%;
     justify-content: space-evenly;
     align-items: center;
@@ -26,6 +27,7 @@
     transition: 0.3s ease-in-out;
     font-weight: 600;
     color: black;
+    margin: 0.5rem;
 }
 
 .nav-links a:hover {
