@@ -1,6 +1,6 @@
 import "./hero.css";
 import Image from "next/image";
-import heroimg from "@/public/images/Alpaca_screenshot.jpg";
+import heroimg from "@/public/images/alpaca1.svg";
 
 export default function Hero() {
   return (

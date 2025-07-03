@@ -6,6 +6,8 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
+  --border-radius-primary: 8px;
+
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
@@ -134,48 +136,54 @@ a.secondary {
 }
 
 .cardPage h4 {
-  font-size: 1.5rem;
-  text-decoration: underline;
+  font-size: 26px;
+    margin: 20px auto;
+}
+
+.cardPage p {
+  width: 80%;
+  margin: auto;
 }
 
 .cards {
-  display: grid;
+  display: flex;
   justify-items: center;
-  margin: 0 auto;
-  width: 80%;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 90%;
   color: white;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
 }
 
 .card {
-  width: 300px;
-  height: 250px;
+  width: 330px;
+  height: 580px;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--color1);
   text-align: left;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  margin: 15px;
+}
+
+.card::-webkit-scrollbar{
+  display: none;
 }
 
 .card * {
   margin: auto;
 }
 
-.card h3 {
-  font-size: 26px;
-  margin: 10px auto;
-}
-
 .card p {
   font-size: 14px;
-  width: 100%;
 }
 
 .card ul {
-  list-style-type: none;
-  margin-left: 0.5rem;
+  list-style-type:decimal;
+  margin-top: 20px;
+  width: 80%;
+  margin: 20px auto;
 }
 
 .card_bold, p.card_bold {
@@ -205,6 +213,52 @@ a.secondary {
   font-size: 16px;
 }
 
+.postPara{
+  width: 60% !important;
+  margin: 50px auto 20px auto !important;
+}
+
+.boxContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.boxContainer h2{
+  margin-bottom: 30px;
+}
+
+.boxContainer ul{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+}
+
+.boxContainer ul li{
+  width: 250px;
+  background-color: var(--color1);
+  color: var(--background);
+  list-style: none;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.boxContainer p {
+  margin-top: 10px;
+}
+
+
+/*MOBILE VIEW*/
+@media (max-width: 1024px) {
+  .boxContainer ul {
+      flex-direction: column;
+    }
+        .boxContainer ul li {
+          width: 100%;
+}
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
@@ -231,8 +285,25 @@ a.secondary {
 
   .main {
     align-items: center;
-    margin: 0.5rem;
+    margin: auto;
+    width: 80%;
   }
+
+    .cardPage p {
+      width: 100%;
+    }
+
+    .cards{
+      width: 100%;
+    }
+
+        .card {
+          margin: 10px auto;
+        }
+        
+                .postPara {
+                  width: 80% !important;
+                }
 
   .main ol {
     text-align: center;

@@ -9,6 +9,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className={styles.main}>
+      <div className={styles.boxContainer}>
       <h2>We want to hear from you!</h2>
       <ul>
         <li>Have a project you need help with?</li>
@@ -16,6 +17,7 @@ export default function ContactPage() {
         <li>Just want to tell us how much you like what we're doing?</li>
       </ul>
       <p>Fill out and submit this form!</p>
+      </div>
       <ContactForm />
     </main>
   );

@@ -11,11 +11,20 @@
 .mainsvg {
     width: 50%;
     min-width: 400px;
-    height: 100%;
+    height: 300px;
+    overflow-y: auto;
+    border-radius: 8px;
 }
 
-.mainsvg img {
+.mainsvg::-webkit-scrollbar {
+    display: none;
+}
+
+.mainsvg::slid .mainsvg img {
     width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
 .info {

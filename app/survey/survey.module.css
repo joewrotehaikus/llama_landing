@@ -1,5 +1,16 @@
 .form {
   margin: 0 auto;
+  background-color: var(--color1);
+  color: var(--background);
+  padding: 20px 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form div ul{
+  display: flex;
+  flex-direction: column;
 }
 
 .form label,
@@ -26,6 +37,8 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 1.2rem;
   padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
 }
 
 .form textarea {
@@ -36,11 +49,12 @@
   display: block;
   height: 2rem;
   width: 2rem;
+  border-radius: 8px;
 }
 
 .btn_submit {
-  background-color: #0f172a;
-  color: white;
+  background-color: #10b981;
+  color: var(--color1);
   padding: 10px 20px;
   border-radius: 8px;
   transition: 0.3s ease-in-out;
@@ -70,4 +84,5 @@ ul.checkboxList input[type="checkbox"],
 ul.checkboxList input[type="text"] {
   display: inline;
   margin-right: 0.25rem;
+  border-radius: 8px;
 }

@@ -1,6 +1,6 @@
 import "./about_landing.css";
 import Image from "next/image";
-import galleryImg from "@/public/images/img8.png";
+import galleryImg from "@/public/images/alphy.jpg";
 
 export default function About_landing() {
   return (

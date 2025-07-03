@@ -116,13 +116,10 @@ export default function CareersPage() {
           </div>
         ))}
       </div>
-      <p>
+      <p className={styles.postPara}>
         Even if your background doesn’t fall into one of those areas, we still
         encourage you to apply. We grow through collaboration and shared
-        purpose.
-      </p>
-      <p>
-        The most important thing for our company is persistance, endurance, and
+        purpose.The most important thing for our company is persistance, endurance, and
         staying connected with the team.
       </p>
 
