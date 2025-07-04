@@ -37,10 +37,11 @@
   margin: 2rem;
 }
 
-.main ol {
+.main ol, .main ul {
   font-family: var(--font-geist-mono);
   padding-left: 0;
   margin: 0;
+  margin-left: 1rem;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.01em;
@@ -131,13 +132,14 @@ a.secondary {
   margin: 50px auto 100px auto;
 }
 
-.cardPage h2, .cardPage h3 {
+.cardPage h2,
+.cardPage h3 {
   text-align: center;
 }
 
 .cardPage h4 {
   font-size: 26px;
-    margin: 20px auto;
+  margin: 20px auto;
 }
 
 .cardPage p {
@@ -156,7 +158,6 @@ a.secondary {
 
 .card {
   width: 330px;
-  height: 580px;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--color1);
@@ -167,7 +168,7 @@ a.secondary {
   margin: 15px;
 }
 
-.card::-webkit-scrollbar{
+.card::-webkit-scrollbar {
   display: none;
 }
 
@@ -180,13 +181,14 @@ a.secondary {
 }
 
 .card ul {
-  list-style-type:decimal;
+  list-style-type: decimal;
   margin-top: 20px;
   width: 80%;
   margin: 20px auto;
 }
 
-.card_bold, p.card_bold {
+.card_bold,
+p.card_bold {
   font-weight: 600;
   font-size: 1.2rem;
 }
@@ -194,7 +196,7 @@ a.secondary {
 .card_desc {
   margin-top: 1rem;
 }
-  
+
 .card button {
   padding: 5px 15px;
   background-color: var(--background);
@@ -213,29 +215,29 @@ a.secondary {
   font-size: 16px;
 }
 
-.postPara{
+.postPara {
   width: 60% !important;
   margin: 50px auto 20px auto !important;
 }
 
-.boxContainer{
+.boxContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
   text-align: center;
 }
-.boxContainer h2{
+.boxContainer h2 {
   margin-bottom: 30px;
 }
 
-.boxContainer ul{
+.boxContainer ul {
   display: flex;
   justify-content: space-evenly;
   width: 80%;
   margin: auto;
 }
 
-.boxContainer ul li{
+.boxContainer ul li {
   width: 250px;
   background-color: var(--color1);
   color: var(--background);
@@ -248,15 +250,14 @@ a.secondary {
   margin-top: 10px;
 }
 
-
 /*MOBILE VIEW*/
 @media (max-width: 1024px) {
   .boxContainer ul {
-      flex-direction: column;
-    }
-        .boxContainer ul li {
-          width: 100%;
-}
+    flex-direction: column;
+  }
+  .boxContainer ul li {
+    width: 100%;
+  }
 }
 
 /* Enable hover only on non-touch devices */
@@ -285,25 +286,25 @@ a.secondary {
 
   .main {
     align-items: center;
-    margin: auto;
-    width: 80%;
+    margin: 0.5rem;
   }
 
-    .cardPage p {
-      width: 100%;
-    }
+  .cardPage p {
+    width: 100%;
+  }
 
-    .cards{
-      width: 100%;
-    }
+  .cards {
+    width: 100%;
+  }
 
-        .card {
-          margin: 10px auto;
-        }
-        
-                .postPara {
-                  width: 80% !important;
-                }
+  .card {
+    margin: 10px auto;
+    padding: 0.5rem;
+  }
+
+  .postPara {
+    width: 80% !important;
+  }
 
   .main ol {
     text-align: center;

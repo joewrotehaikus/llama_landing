@@ -1,7 +1,6 @@
 .heroblock {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
     margin: auto;
     align-items: center;
     justify-content: space-between;
